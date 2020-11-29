@@ -5,9 +5,11 @@ plugins {
     id 'java'
 }
 
-group = 'com.study'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '8'
+sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
@@ -16,11 +18,13 @@ repositories {
 dependencies {
     implementation 'junit:junit:4.12'
     implementation 'junit:junit:4.12'
-    compile('mysql:mysql-connector-java')
-    compile 'org.projectlombok:lombok:1.18.16'
-    annotationProcessor 'org.projectlombok:lombok:1.18.16'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'junit:junit:4.12'
 
+    //implementation 'junit:junit:4.12'
+    compile ('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('mysql:mysql-connector-java')
+    compile ('org.projectlombok:lombok:1.18.16')
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 

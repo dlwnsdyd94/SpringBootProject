@@ -30,7 +30,11 @@ public class ItemRepositoryTest extends StudyApplicationTests {
     public void read(){
         Long id = 1L;
 
-        Optional<Item> 
+        Optional<Item> item = itemRepository.findById(id);
+
+        item.ifPresent(i -> {
+            System.out.println(i);
+        });
     }
 
 }

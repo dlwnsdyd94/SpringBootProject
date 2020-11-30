@@ -23,10 +23,10 @@ public class UserRepositoryTest extends StudyApplicationTests {
         // String sql = insert into user ( %s, %s, %d ) value (account, email, age);
         User user = new User();
         user.setAccount("TestUser03");
-        user.setEmail("TestUser03@gmail.com");
+        user.setEmail("TestUser04@gmail.com");
         user.setPhoneNumber("010-1111-3333");
         user.setCreatedAt(LocalDateTime.now());
-        user.setCreatedBy("TestUser3");
+        user.setCreatedBy("TestUser4");
         //System.out.println(("User : " + user));
 
         User newUser = userRepository.save(user);

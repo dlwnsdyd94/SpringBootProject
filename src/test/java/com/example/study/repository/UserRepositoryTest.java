@@ -23,7 +23,7 @@ public class UserRepositoryTest extends StudyApplicationTests {
     public void create(){
         // String sql = insert into user ( %s, %s, %d ) value (account, email, age);
         User user = new User();
-        user.setAccount("TestUser03");
+        user.setAccount("TestUser07");
         user.setEmail("TestUser04@gmail.com");
         user.setPhoneNumber("010-1111-3333");
         user.setCreatedAt(LocalDateTime.now());
@@ -37,7 +37,9 @@ public class UserRepositoryTest extends StudyApplicationTests {
     @Test
     @Transactional
     public void read(){
-        Optional<User> user = userRepository.findById(7L);
+
+        // select * from user where id = ?
+        Optional<User> user = userRepository.findByAccount("TestUser07");
 
         user.ifPresent(selectUser -> {
 

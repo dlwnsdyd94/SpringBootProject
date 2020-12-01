@@ -39,7 +39,7 @@ public class UserRepositoryTest extends StudyApplicationTests {
     public void read(){
 
         // select * from user where id = ?
-        Optional<User> user = userRepository.findByAccount("TestUser07");
+        Optional<User> user = userRepository.findByAccount("TestUser03");
 
         user.ifPresent(selectUser -> {
 

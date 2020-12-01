@@ -24,6 +24,10 @@ public class Item {
     private String content;
 
     // 1 : N
+    // LAZY = 지연로딩, EAGER = 즉시로딩
+
+    // LAZY = SELECT * FROM item where id = ?
+    
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "item")
     private List<OrderDetail> orderDetailList;
 

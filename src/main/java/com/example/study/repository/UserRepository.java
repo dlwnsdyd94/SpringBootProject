@@ -10,7 +10,7 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     // select * from user where account = ? << test03, test04
-    Optional<User> findByAccount(String account);
+    Optional<User> findByAccount(String account); // 변수명과 컬럼명을 동일하게 맞추는 것을 추천
 
 
     Optional<User> findByEmail(String email);

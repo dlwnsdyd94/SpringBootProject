@@ -27,7 +27,15 @@ public class Item {
     // LAZY = 지연로딩, EAGER = 즉시로딩
 
     // LAZY = SELECT * FROM item where id = ?
+
+
+    // EAGER는 일대일 일때만 추천하는 방식
+    // item_id = order_detail.item_id
+    // user_id = order_detail.user_id
+    //where item.id = ?
+    // JOIN item item0_ left outer join order_detail orderdetai1_ on item0_.id=orderdetai1_.item_id left outer join user user2_ on orderdetai1_.user_id=user2_.id
     
+    // 일대다는 반드시 LAZY type으로 사용
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "item")
     private List<OrderDetail> orderDetailList;
 
